@@ -1,0 +1,47 @@
+First name,Last name,Gender,Email,Salary,Department,Manager Type,Job title,Bank
+Kate,Summer,Female,kate.summer@harbourbank.ie,52000.00,IT Services,Team Leader,QA Team Lead,Harbour Bank
+Ken,Winter,Male,ken.winter@harbourbank.ie,43000.00,IT Services,Officer,Backend Developer,Harbour Bank
+James,Anderson,Male,james.anderson@harbourbank.ie,95000.00,Retail Banking,Branch Manager,Branch Manager,Harbour Bank
+Sarah,Johnson,Female,sarah.johnson@harbourbank.ie,52500.00,Human Resources,Team Leader,HR Team Lead,Harbour Bank
+John,Smith,Male,john.smith@harbourbank.ie,65000.00,Finance and Accounts,Department Head,Head of Finance,Harbour Bank
+Emily,Brown,Female,emily.brown@harbourbank.ie,44900.00,Loans and Mortgages,Officer,Mortgage Advisor,Harbour Bank
+Michael,Williams,Male,michael.williams@harbourbank.ie,33500.00,Customer Service,Clerk,Customer Service Clerk,Harbour Bank
+Sophia,Taylor,Female,sophia.taylor@harbourbank.ie,44800.00,Customer Service,Officer,Client Relations Officer,Harbour Bank
+David,Wilson,Male,david.wilson@harbourbank.ie,66000.00,IT Services,Department Head,Head of IT,Harbour Bank
+Olivia,Martinez,Female,olivia.martinez@harbourbank.ie,33400.00,Finance and Accounts,Clerk,Accounts Clerk,Harbour Bank
+Ethan,Anderson,Male,ethan.anderson@harbourbank.ie,45400.00,Risk and Compliance,Officer,Risk Analyst,Harbour Bank
+Mia,Clark,Female,mia.clark@harbourbank.ie,43600.00,Risk and Compliance,Officer,Compliance Officer,Harbour Bank
+John,Anderson,Male,john.anderson@harbourbank.ie,65000.00,Retail Banking,Department Head,Head of Retail Banking,Harbour Bank
+Sam,Johnson,Female,sam.johnson@harbourbank.ie,65500.00,Human Resources,Department Head,Head of HR,Harbour Bank
+John,Brown,Male,john.brown@harbourbank.ie,68000.00,Loans and Mortgages,Department Head,Head of Lending,Harbour Bank
+Emma,Brown,Female,emma.brown@harbourbank.ie,34400.00,Loans and Mortgages,Clerk,Loans Clerk,Harbour Bank
+Max,Williams,Male,max.williams@harbourbank.ie,31400.00,IT Services,Clerk,IT Support Clerk,Harbour Bank
+Sonya,Taylor,Female,sonya.taylor@harbourbank.ie,43400.00,Customer Service,Officer,Customer Service Officer,Harbour Bank
+Denis,Wilson,Male,denis.wilson@harbourbank.ie,68000.00,Risk and Compliance,Department Head,Head of Risk,Harbour Bank
+Olga,Martinez,Female,olga.martinez@harbourbank.ie,34100.00,Finance and Accounts,Clerk,Accounts Clerk,Harbour Bank
+Ed,Anderson,Male,ed.anderson@harbourbank.ie,45400.00,Finance and Accounts,Officer,Financial Analyst,Harbour Bank
+Milla,Clark,Female,milla.clark@harbourbank.ie,33300.00,Risk and Compliance,Clerk,Compliance Clerk,Harbour Bank
+Sophia,Lopez,Female,sophia.lopez@harbourbank.ie,34400.00,Retail Banking,Clerk,Bank Teller,Harbour Bank
+Benjamin,Hill,Male,benjamin.hill@harbourbank.ie,66000.00,Customer Service,Department Head,Head of Customer Service,Harbour Bank
+Jessica,Lee,Female,jessica.lee@harbourbank.ie,80000.00,Retail Banking,Deputy Manager,Deputy Branch Manager,Harbour Bank
+Daniel,Walker,Male,daniel.walker@harbourbank.ie,32100.00,Retail Banking,Clerk,Bank Teller,Harbour Bank
+Eleanor,Harris,Female,eleanor.harris@harbourbank.ie,43700.00,Loans and Mortgages,Officer,Loans Officer,Harbour Bank
+Chris,Evans,Male,chris.evans@harbourbank.ie,34400.00,Customer Service,Clerk,Customer Service Clerk,Harbour Bank
+Alex,Turner,Male,alex.turner@harbourbank.ie,43600.00,IT Services,Officer,Backend Developer,Harbour Bank
+Nina,Holmes,Female,nina.holmes@harbourbank.ie,45100.00,Finance and Accounts,Officer,Financial Analyst,Harbour Bank
+Victor,Stewart,Male,victor.stewart@harbourbank.ie,54500.00,IT Services,Team Leader,Development Team Lead,Harbour Bank
+Lucy,Bennett,Female,lucy.bennett@harbourbank.ie,44900.00,Human Resources,Officer,HR Officer,Harbour Bank
+Oscar,Reed,Male,oscar.reed@harbourbank.ie,54800.00,Finance and Accounts,Team Leader,Accounts Team Lead,Harbour Bank
+Lana,Parker,Female,lana.parker@harbourbank.ie,45400.00,IT Services,Officer,AI Developer,Harbour Bank
+Harry,Cooper,Male,harry.cooper@harbourbank.ie,34700.00,Retail Banking,Clerk,Bank Teller,Harbour Bank
+Isla,Fisher,Female,isla.fisher@harbourbank.ie,52700.00,Risk and Compliance,Team Leader,Compliance Team Lead,Harbour Bank
+Leo,Wright,Male,leo.wright@harbourbank.ie,42000.00,IT Services,Officer,DevOps Engineer,Harbour Bank
+Eva,Mitchell,Female,eva.mitchell@harbourbank.ie,53500.00,Customer Service,Team Leader,Customer Service Team Lead,Harbour Bank
+Ryan,Carter,Male,ryan.carter@harbourbank.ie,52400.00,Retail Banking,Team Leader,Teller Team Lead,Harbour Bank
+Holly,Brooks,Female,holly.brooks@harbourbank.ie,45600.00,IT Services,Officer,Mobile Developer,Harbour Bank
+Daniel,Gray,Male,daniel.gray@harbourbank.ie,52500.00,Loans and Mortgages,Team Leader,Mortgage Team Lead,Harbour Bank
+Layla,Jones,Female,layla.jones@harbourbank.ie,32800.00,Finance and Accounts,Clerk,Bookkeeper,Harbour Bank
+Sebastian,Morgan,Male,sebastian.morgan@harbourbank.ie,31300.00,Human Resources,Clerk,HR Assistant,Harbour Bank
+Elena,Scott,Female,elena.scott@harbourbank.ie,78200.00,Retail Banking,Deputy Manager,Deputy Branch Manager,Harbour Bank
+Finn,Walker,Male,finn.walker@harbourbank.ie,34400.00,Customer Service,Clerk,Customer Service Clerk,Harbour Bank
+Amelia,King,Female,amelia.king@harbourbank.ie,42400.00,Retail Banking,Officer,Personal Banker,Harbour Bank
