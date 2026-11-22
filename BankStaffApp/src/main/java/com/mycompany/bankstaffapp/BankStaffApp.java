@@ -1,7 +1,9 @@
 package com.mycompany.bankstaffapp;
 
-import com.mycompany.bankstaffapp.model.BankDepartment;
-import com.mycompany.bankstaffapp.model.BankRole;
+import com.mycompany.bankstaffapp.model.StaffFileLoader;
+import com.mycompany.bankstaffapp.model.StaffMember;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Harbour Bank staff app - CA2 Algorithms and Constructs
@@ -11,20 +13,21 @@ import com.mycompany.bankstaffapp.model.BankRole;
 public class BankStaffApp {
 
     public static void main(String[] args) {
-        // quick check that both enums work - this gets replaced by the menu later
-        System.out.println("Harbour Bank roles (rank order):");
-        for (BankRole role : BankRole.values()) {
-            System.out.println("  " + role.getRank() + ". " + role);
-        }
+        StaffFileLoader loader = new StaffFileLoader();
 
-        System.out.println("Harbour Bank departments:");
-        for (BankDepartment dept : BankDepartment.values()) {
-            System.out.println("  [" + dept.getCode() + "] " + dept);
-        }
+        try {
+            // load every line of the file into a list of StaffMember objects
+            List<StaffMember> staff = loader.load("Applicants_Form.txt");
+            System.out.println("File read successfully - " + staff.size() + " staff loaded, "
+                    + loader.getRejectedLines() + " lines rejected");
 
-        // test the lookups, including one that should fail
-        System.out.println("fromText(\"team leader\") -> " + BankRole.fromText("team leader"));
-        System.out.println("fromText(\"loa\") -> " + BankDepartment.fromText("loa"));
-        System.out.println("fromText(\"Pizza\") -> " + BankDepartment.fromText("Pizza"));
+            // print everyone so we can see the data came in properly
+            for (StaffMember member : staff) {
+                System.out.println(member);
+            }
+        } catch (IOException e) {
+            // file is missing or in the wrong folder
+            System.out.println("Could not read the file: " + e.getMessage());
+        }
     }
 }
