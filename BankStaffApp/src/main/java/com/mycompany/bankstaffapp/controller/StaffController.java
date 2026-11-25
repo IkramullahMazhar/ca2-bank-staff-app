@@ -13,6 +13,8 @@ import java.io.IOException;
  */
 public class StaffController {
 
+    private static final int NAMES_TO_SHOW = 20; // the brief asks for the first 20
+
     private final StaffDirectory directory; // the model
     private final BankConsole console;      // the view
 
@@ -38,6 +40,8 @@ public class StaffController {
 
             switch (choice) {
                 case SORT:
+                    sortStaff();
+                    break;
                 case SEARCH:
                 case ADD_RECORDS:
                 case BINARY_TREE:
@@ -65,5 +69,13 @@ public class StaffController {
                 console.showError("Could not open '" + fileName + "'. Check the name and try again.");
             }
         }
+    }
+
+    // SORT: model sorts the list, view shows the first 20
+    private void sortStaff() {
+        directory.sortByName();
+        console.showHeading("Staff sorted A-Z (first " + NAMES_TO_SHOW + " of " + directory.size() + ")");
+        console.showStaffTable(directory.getFirst(NAMES_TO_SHOW));
+        console.show("Merge sort used " + directory.getLastSortComparisons() + " comparisons.");
     }
 }
