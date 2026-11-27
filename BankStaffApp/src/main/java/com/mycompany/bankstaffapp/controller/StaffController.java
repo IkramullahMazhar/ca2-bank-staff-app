@@ -1,8 +1,10 @@
 package com.mycompany.bankstaffapp.controller;
 
 import com.mycompany.bankstaffapp.model.StaffDirectory;
+import com.mycompany.bankstaffapp.model.StaffMember;
 import com.mycompany.bankstaffapp.view.BankConsole;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Controller - the middle man between the Model and the View.
@@ -43,6 +45,8 @@ public class StaffController {
                     sortStaff();
                     break;
                 case SEARCH:
+                    searchStaff();
+                    break;
                 case ADD_RECORDS:
                 case BINARY_TREE:
                     // each of these gets built in its own commit
@@ -77,5 +81,31 @@ public class StaffController {
         console.showHeading("Staff sorted A-Z (first " + NAMES_TO_SHOW + " of " + directory.size() + ")");
         console.showStaffTable(directory.getFirst(NAMES_TO_SHOW));
         console.show("Merge sort used " + directory.getLastSortComparisons() + " comparisons.");
+    }
+
+    // SEARCH: ask for a name, model does the binary search, view shows the result
+    private void searchStaff() {
+        if (!directory.isSortedByName()) {
+            console.show("(The list wasn't sorted yet, so it is sorted first - binary search needs that.)");
+        }
+
+        String name = console.ask("Enter the full name to search (e.g. James Anderson): ");
+        if (name.trim().isEmpty()) {
+            console.showError("Name can't be empty.");
+            return;
+        }
+
+        List<StaffMember> matches = directory.searchByName(name);
+        if (matches.isEmpty()) {
+            console.showError("No staff member called '" + name.trim() + "' was found.");
+            console.show("Tip: type the first AND last name, e.g. Kate Summer");
+            return;
+        }
+
+        console.showHeading("Search result");
+        for (StaffMember member : matches) {
+            console.showStaffDetails(member);
+        }
+        console.show("Binary search found it in " + directory.getLastSearchSteps() + " step(s).");
     }
 }

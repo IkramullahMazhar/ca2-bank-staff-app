@@ -59,4 +59,18 @@ public class BankConsole {
             row++;
         }
     }
+
+    // shows one person's details for a search result
+    public void showStaffDetails(StaffMember member) {
+        System.out.println("  Name         : " + member.getFullName());
+        System.out.println("  Manager Type : " + member.getRole());
+        System.out.println("  Department   : " + member.getDepartment());
+        if (!member.getJobTitle().isEmpty()) {
+            System.out.println("  Job title    : " + member.getJobTitle());
+        }
+        if (!member.getEmail().isEmpty()) {
+            System.out.println("  Email        : " + member.getEmail());
+        }
+        System.out.println();
+    }
 }

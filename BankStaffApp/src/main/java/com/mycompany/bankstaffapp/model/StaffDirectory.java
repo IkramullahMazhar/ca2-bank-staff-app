@@ -1,5 +1,6 @@
 package com.mycompany.bankstaffapp.model;
 
+import com.mycompany.bankstaffapp.algorithm.StaffBinarySearch;
 import com.mycompany.bankstaffapp.algorithm.StaffMergeSort;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * Model - keeps the list of all Harbour Bank staff in memory.
  * The controller asks this class to do things with the data
- * (load, sort, and later search, add and build the tree).
+ * (load, sort, search, and later add and build the tree).
  *
  * @author Ikramullah Mazhar
  */
@@ -17,6 +18,7 @@ public class StaffDirectory {
     private List<StaffMember> staff = new ArrayList<>();
     private final StaffFileLoader loader = new StaffFileLoader();
     private final StaffMergeSort sorter = new StaffMergeSort();
+    private final StaffBinarySearch searcher = new StaffBinarySearch();
     private boolean sortedByName = false; // binary search will need this to be true
 
     // loads the file and returns how many staff came in
@@ -58,5 +60,43 @@ public class StaffDirectory {
     public List<StaffMember> getFirst(int n) {
         int end = Math.min(n, staff.size());
         return new ArrayList<>(staff.subList(0, end));
+    }
+
+    // finds everyone with this full name using the recursive binary search
+    // (a list, because two people could have the same name)
+    public List<StaffMember> searchByName(String name) {
+        // binary search only works on a sorted list, so sort first if needed
+        if (!sortedByName) {
+            sortByName();
+        }
+
+        // tidy what the user typed: "  james   anderson " -> "james anderson"
+        String target = name.trim().replaceAll("\\s+", " ");
+        List<StaffMember> matches = new ArrayList<>();
+
+        int index = searcher.findIndex(staff, target);
+        if (index == -1) {
+            return matches; // empty list = not found
+        }
+
+        // same names sit next to each other in a sorted list,
+        // so step left and right from the match to collect them all
+        int first = index;
+        while (first > 0 && staff.get(first - 1).getFullName().equalsIgnoreCase(target)) {
+            first--;
+        }
+        int last = index;
+        while (last < staff.size() - 1 && staff.get(last + 1).getFullName().equalsIgnoreCase(target)) {
+            last++;
+        }
+        for (int i = first; i <= last; i++) {
+            matches.add(staff.get(i));
+        }
+        return matches;
+    }
+
+    // how many names the last search checked
+    public int getLastSearchSteps() {
+        return searcher.getSteps();
     }
 }
